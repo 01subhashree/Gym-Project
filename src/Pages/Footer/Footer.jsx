@@ -10,9 +10,7 @@ const Footer = () => {
     <>
       <div className={style.container}>
         <div className={style.footer_title}>
-          <h2>
-            <span>The Warehouse Gym</span>
-          </h2>
+          <h2>The Warehouse Gym</h2>
           <p>Your Body Temple</p>
 
           <div className={style.social_icons}>
@@ -34,26 +32,20 @@ const Footer = () => {
         <div className={style.footer_content}>
           <hr />
           <ul>
-            <h3>
-              <span>The Warehouse Gym</span>
-            </h3>
+            <h3>The Warehouse Gym</h3>
             <Link to="/home">Home</Link>
             <Link to="/aboutus">AboutUs</Link>
             <Link to="/training">Traning</Link>
           </ul>
 
           <ul>
-            <h3>
-              <span>Services</span>
-            </h3>
+            <h3>Services</h3>
             <Link to="/">Apply Online</Link>
             <Link>Available Positions</Link>
           </ul>
 
           <ul>
-            <h3>
-              <span>About Us</span>
-            </h3>
+            <h3>About Us</h3>
             <Link to="/trainer">Meet Our Team</Link>
             <Link>Our Responsibilities</Link>
             <Link>Our Codes</Link>
