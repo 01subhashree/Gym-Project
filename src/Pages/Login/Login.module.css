@@ -10,6 +10,7 @@
     gap: 2vh;
     flex-direction: column;
     box-shadow: 15px 18px 25px rgba(34, 36, 34, 0.678);
+    border-radius: 18px;
 }
 
 

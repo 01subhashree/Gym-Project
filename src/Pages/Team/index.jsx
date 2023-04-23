@@ -1,17 +1,15 @@
 import React from "react";
 import Carousel from "./Carousel";
 import { Link } from "react-router-dom";
-import style from "../TrainerSection/App.module.css";
+import "./Carousel.css";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
 function Team() {
   const data = [
     {
-      image:
-        "https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg",
+      image: "https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg",
       caption: "Dickerson <br/> CROSSFIT COACH",
-      
     },
     {
       image:
@@ -21,7 +19,7 @@ function Team() {
     {
       image:
         "https://images.pexels.com/photos/6296010/pexels-photo-6296010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      caption: "Williamson <br/> WRESTLING COACH ", 
+      caption: "Williamson <br/> WRESTLING COACH ",
     },
     {
       image:
@@ -61,11 +59,13 @@ function Team() {
 
   return (
     <div className="Tranning">
-      <Header/>
+      <Header />
       <div style={{ textAlign: "center" }}>
         <h1>Our Professional Team</h1>
-        <p>
-        We are a team of experienced people, nutrition, sports and fitness<br /> passionate experts with talent and knowledge unsurpassed in the industry. Get to Know us.
+        <p className="Paragraph">
+          We are a team of experienced people, nutrition, sports and fitness
+          passionate experts with talent and knowledge unsurpassed in the
+          industry. Get to Know us.
         </p>
         <div
           style={{
@@ -97,11 +97,12 @@ function Team() {
               margin: "40px auto",
             }}
           />
-          <br/><br/>
-           <Link to={'/Trainer'} className="link-tag"> <button className='btnTeam'  >Back</button> </Link>
+          <Link to={"/Trainer"}>
+            <button className="btnTeam">Back</button>
+          </Link>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
