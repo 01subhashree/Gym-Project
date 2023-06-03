@@ -26,6 +26,8 @@ function Login() {
     }
   }
 
+  console.log(test);
+
   return homeVis ? (
     <Home />
   ) : (

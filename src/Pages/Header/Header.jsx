@@ -4,11 +4,11 @@ import header from "./Header.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BsXCircle } from "react-icons/bs";
 import { showHome } from "../../locaStorage/localStorage";
-import { useRecoilState } from "recoil";
+import { useSetRecoilState } from "recoil";
 
 function Header() {
   const [isVisible, setIsVisible] = useState(false);
-  const [isLogin, setIsLogin] = useRecoilState(showHome);
+  const setIsLogin = useSetRecoilState(showHome);
   return (
     <div className={header.nav}>
       <Link to={"/home"}>

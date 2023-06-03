@@ -1,6 +1,7 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
 import Swipe from "react-easy-swipe";
- import "./Carousel.css"
+import "./Carousel.css";
 
 function Carousel({
   data,
@@ -54,7 +55,7 @@ function Carousel({
         clearInterval(interval);
       };
     }
-  }, [isPaused, change]);
+  }, [isPaused, change, automatic, data.length, slide, time]);
 
   function scrollTo(el) {
     const elLeft = el.offsetLeft + el.offsetWidth;
@@ -101,7 +102,7 @@ function Carousel({
     if (slides[slideIndex] !== undefined)
       slides[slideIndex].style.display = "block";
     if (dots[slideIndex] !== undefined) dots[slideIndex].className += " active";
-  }, [slide, isPaused]);
+  }, [slide, isPaused, data.length, thumbnails]);
 
   return (
     <div style={style} className="box">
@@ -243,20 +244,19 @@ function Carousel({
           {data.map((item, index) => {
             return (
               <>
-             
-              <img
-                width={thumbnailWidth ? thumbnailWidth : "100px"}
-                src={item.image}
-                alt={item.caption}
-                className="thumbnail"
-                id={`thumbnail-${index}`}
-                key={index}
-                onClick={(e) => {
-                  setSlide(index);
-                  setChange(!change);
-                }}
+                <img
+                  width={thumbnailWidth ? thumbnailWidth : "100px"}
+                  src={item.image}
+                  alt={item.caption}
+                  className="thumbnail"
+                  id={`thumbnail-${index}`}
+                  key={index}
+                  onClick={(e) => {
+                    setSlide(index);
+                    setChange(!change);
+                  }}
                 />
-                </>
+              </>
             );
           })}
         </div>
