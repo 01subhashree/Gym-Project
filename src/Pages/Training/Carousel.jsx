@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import Swipe from "react-easy-swipe";
- import "./Carousel.css"
+import "./Carousel.css";
 
 function Carousel({
   data,
@@ -258,7 +260,6 @@ function Carousel({
           })}
         </div>
       )}
-      
     </div>
   );
 }
